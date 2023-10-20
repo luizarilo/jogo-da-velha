@@ -1,0 +1,186 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --primary: #15aaff;
+  --secondary: #373636;
+  --text: #f8f7f3;
+  --disabled: #0e75b1;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.text-game {
+  font-family: "Pixelify Sans", sans-serif;
+  color: var(--primary);
+}
+
+.game-logo {
+  width: 10%;
+}
+
+.input-name {
+  display: flex;
+  flex-direction: column;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 15px;
+  color: var(--text);
+  margin: 10px 0 10px 0;
+}
+
+.input-name label {
+  margin: 5px;
+}
+
+.name-player {
+  width: 250px;
+  height: 30px;
+  border: 1px solid var(--text);
+  border-radius: 10px;
+  padding-left: 10px;
+}
+
+.btn-game, #start-game{
+  width: 200px;
+  height: 35px;
+  border-radius: 50px;
+  border: none;
+  background-color: var(--primary);
+  color: var(--text);
+  font-family: "Pixelify Sans", sans-serif;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+#start-game{
+    margin-top: 20px;
+}
+
+#start-game:disabled{
+    background-color: var(--disabled);
+}
+
+.btn-game:hover {
+  background-color: var(--text);
+  color: var(--primary);
+}
+
+/*  */
+
+.container-game {
+  width: 50%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.game {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: 400px;
+  height: 400px;
+}
+
+.cursor-pointer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--primary);
+  cursor: pointer;
+  background-color: transparent;
+  -webkit-appearance: none; 
+  -moz-appearance: none; 
+  appearance: none; 
+  font-size: 4rem;
+}
+
+option{
+   text-align: center;
+   font-size: 16px;
+   color: var(--secondary);
+}
+.information-players {
+  display: flex;
+  font-family: "Pixelify Sans", sans-serif;
+  color: var(--text);
+  margin: 10px;
+}
+
+.nome-um {
+  color: green;
+}
+
+.nome-dois {
+  color: red;
+}
+
+.information-players h1 {
+  margin-right: 20px;
+}
+
+.information-game {
+  font-family: "Pixelify Sans", sans-serif;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+#turn-player{
+    display: none;
+}
+
+.modal{
+  width: 600px;
+  height: 300px;
+  display: none;
+  position: absolute;
+  border-radius: 5px;
+  background: linear-gradient(var(--secondary), var(--text));
+}
+
+.modal-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.winner-image{
+  width: 15%;
+  margin-top: 10px;
+}
+
+.winner-text{
+  font-family: "Pixelify Sans", sans-serif;
+  color: var(--text);
+  font-size: 30px;
+}
+
+.btn-modal{
+  margin-top: 40px;
+}
+
+.btn{
+  background-color: #0e75b1;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  font-family: "Pixelify Sans", sans-serif;
+  color: var(--text);
+  cursor: pointer
+}
+
+#close{
+  margin-left: 10px;
+}

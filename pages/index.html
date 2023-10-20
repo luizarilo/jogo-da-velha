@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jogo da velha</title>
+    <script src="../scripts/index.js" defer></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <section class="container-game">
+      <div class="information-players">
+        <h1>Jogador um: <span class="nome-um"></span>
+        </h1>
+        <h1>Jogador dois: <span class="nome-dois"></span></h1>
+      </div>
+      <h2 class = "information-game">Vez de: <span id ="turn-player"></span></h2>
+      <div class="game">
+        <button name="select1" id="select1" class="cursor-pointer" disabled>
+
+        </button>
+        <button name="select1" id="select2" class="cursor-pointer" disabled>
+
+        </button>
+        <button name="select1" id="select3" class="cursor-pointer" disabled>
+
+        </button>
+        <button name="select1" id="select4" class="cursor-pointer" disabled>
+
+        </button>
+        <button name="select1" id="select5" class="cursor-pointer" disabled>
+
+        </button>
+        <button name="select1" id="select6" class="cursor-pointer" disabled>
+
+        </button>
+        <button name="select1" id="select7" class="cursor-pointer" disabled>
+
+        </button>
+        <button name="select1" id="select8" class="cursor-pointer" disabled>
+
+        </button>
+        <button name="select1" id="select9" class="cursor-pointer" disabled>
+
+        </button>
+      </div>
+      <button type="button" id = "start-game">Iniciar jogo</button>
+
+      <div class="modal" id = "modal">
+        <div class="modal-content">
+          <img class = "winner-image" src="../assets/1.png" alt="winner-image">
+          <p class = "winner-text" id="result-game"></p>
+          <div class="btn-modal">
+            <button class = "btn" id = "play-again">Jogar novamente</button>
+            <button class = "btn" id = "close">Fechar</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
