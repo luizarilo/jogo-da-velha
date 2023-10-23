@@ -1,3 +1,7 @@
+//Verificar nome vazio antes de iniciar
+
+
+
 const jogadorUm = localStorage.getItem(`jogadorUm`)
 const jogadorDois = localStorage.getItem(`jogadorDois`)
 const nomeJogadorUm = document.querySelector(`.nome-um`)
@@ -9,8 +13,10 @@ const resultado = document.getElementById(`result-game`)
 const modalVencedor = document.getElementById(`modal`)
 const botaoFechar = document.getElementById(`close`)
 const botaoReiniciar = document.getElementById(`play-again`)
-nomeJogadorUm.textContent = jogadorDois
-nomeJogadorDois.textContent = jogadorUm
+const imagemVencedor = document.getElementById(`winner-image`)
+const restartGame = document.getElementById(`reiniciar`)
+nomeJogadorUm.textContent = jogadorUm
+nomeJogadorDois.textContent = jogadorDois
 let turnPlayer = aleatorio()
 
 startGame.addEventListener(`click`, function () {
@@ -22,6 +28,7 @@ startGame.addEventListener(`click`, function () {
     turnoJogador.style.display = `inline`
     alternarTurnos()
     aleatorio()
+  
 })
 
 options.forEach(function (select) {
@@ -30,11 +37,12 @@ options.forEach(function (select) {
         alternarTurnos()
         if (turnPlayer === jogadorUm) {
             select.innerText = `X`
-            select.style.color = `red`
+            select.style.color = `green`
             select.value = `X`
         } else {
             select.innerText = `O`
-            select.style.color = `green`
+            
+            select.style.color = `red`
             select.value = `O`
         }
         verificaVencedor()
@@ -80,15 +88,26 @@ function verificaVencedor() {
         resultado.innerText = `${jogadorUm}, você é o vencedor!`
         vencedorDois = true
         modalVencedor.style.display = `inline`
+        options.forEach(function (elemento) {
+            elemento.disabled = true
+        })
     }
     else if (pos1 === `O` && pos2 === `O` && pos3 === `O` || pos4 === `O` && pos5 === `O` && pos6 === `O` || pos7 === `O` && pos8 === `O` && pos9 === `O` || pos1 === `O` && pos4 === `O` && pos7 === `O` || pos2 === `O` && pos5 === `O` && pos8 === `O` || pos3 === `O` && pos6 === `O` && pos9 === `O` || pos1 === `O` && pos5 === `O` && pos9 === `O` || pos3 === `O` && pos5 === `O` && pos7 === `O`) {
         console.log(`Vencedor Um`)
         resultado.innerText = `${jogadorDois}, você é o vencedor!`
         vencedorUm = true
         modalVencedor.style.display = `inline`
+        options.forEach(function (elemento) {
+            elemento.disabled = true
+        })
     }else if( vencedorUm === false && vencedorDois === false && pos1 !== '' && pos2 !== '' && pos3 !== '' && pos4 !== '' && pos5 !== '' && pos6 !== '' && pos7 !== '' && pos8 !== '' && pos9 !== ''){
         resultado.innerText = `Temos um empate!`
         modalVencedor.style.display = `inline`
+        imagemVencedor.style.display = `none`
+        options.forEach(function (elemento) {
+            elemento.disabled = true
+            
+        })
     }
 }
 
@@ -97,5 +116,9 @@ botaoFechar.addEventListener(`click`, function(){
 })
 
 botaoReiniciar.addEventListener(`click`, function(){
+    window.location.reload();
+})
+
+restartGame.addEventListener(`click`, function(){
     window.location.reload();
 })

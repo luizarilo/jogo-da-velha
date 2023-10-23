@@ -1,14 +1,32 @@
 const botaoIniciar = document.getElementById(`btn-game`)
+const alerta = document.getElementById(`alert`)
+let jogadorDois = document.getElementById(`jogador-dois`)
+let jogadorUm = document.getElementById(`jogador-um`)
+botaoIniciar.addEventListener(`click`, function () {
+    jogadorUm = document.getElementById(`jogador-um`).value
+    jogadorDois = document.getElementById(`jogador-dois`).value
 
-botaoIniciar.addEventListener(`click`, function(){
-    const jogadorUm = document.getElementById(`jogador-um`).value
-    const jogadorDois = document.getElementById(`jogador-dois`).value
+    if (jogadorDois === `` || jogadorUm === ``) {
+        verificarNome()
+    } else {
+        localStorage.setItem(`jogadorUm`, jogadorUm)
+        localStorage.setItem(`jogadorDois`, jogadorDois)
+        window.location.href = `game.html`
+    }
 
-    localStorage.setItem(`jogadorUm`, JSON.stringify(jogadorUm))
-    localStorage.setItem(`jogadorDois`, JSON.stringify(jogadorDois))
 
-    window.location.href = `game.html`
+})
 
-    console.log(jogadorDois);
-    console.log(jogadorUm)
+function verificarNome(){
+    alerta.style.display = `inline`
+    
+}
+
+jogadorDois.addEventListener(`focus`,function(){
+    alerta.style.display = `none`
+
+})
+
+jogadorDois.addEventListener(`focus`,function(){
+    alerta.style.display = `none`
 })

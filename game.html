@@ -14,49 +14,77 @@
   <body>
     <section class="container-game">
       <div class="information-players">
-        <h1>Jogador um: <span class="nome-um"></span>
-        </h1>
+        <h1>Jogador um: <span class="nome-um"></span></h1>
         <h1>Jogador dois: <span class="nome-dois"></span></h1>
       </div>
-      <h2 class = "information-game">Vez de: <span id ="turn-player"></span></h2>
+      <h2 class="information-game">Vez de: <span id="turn-player"></span></h2>
       <div class="game">
-        <button name="select1" id="select1" class="cursor-pointer" disabled>
-
-        </button>
-        <button name="select1" id="select2" class="cursor-pointer" disabled>
-
-        </button>
-        <button name="select1" id="select3" class="cursor-pointer" disabled>
-
-        </button>
-        <button name="select1" id="select4" class="cursor-pointer" disabled>
-
-        </button>
-        <button name="select1" id="select5" class="cursor-pointer" disabled>
-
-        </button>
-        <button name="select1" id="select6" class="cursor-pointer" disabled>
-
-        </button>
-        <button name="select1" id="select7" class="cursor-pointer" disabled>
-
-        </button>
-        <button name="select1" id="select8" class="cursor-pointer" disabled>
-
-        </button>
-        <button name="select1" id="select9" class="cursor-pointer" disabled>
-
-        </button>
+        <button
+          name="select1"
+          id="select1"
+          class="cursor-pointer"
+          disabled
+        ></button>
+        <button
+          name="select1"
+          id="select2"
+          class="cursor-pointer"
+          disabled
+        ></button>
+        <button
+          name="select1"
+          id="select3"
+          class="cursor-pointer"
+          disabled
+        ></button>
+        <button
+          name="select1"
+          id="select4"
+          class="cursor-pointer"
+          disabled
+        ></button>
+        <button
+          name="select1"
+          id="select5"
+          class="cursor-pointer"
+          disabled
+        ></button>
+        <button
+          name="select1"
+          id="select6"
+          class="cursor-pointer"
+          disabled
+        ></button>
+        <button
+          name="select1"
+          id="select7"
+          class="cursor-pointer"
+          disabled
+        ></button>
+        <button
+          name="select1"
+          id="select8"
+          class="cursor-pointer"
+          disabled
+        ></button>
+        <button
+          name="select1"
+          id="select9"
+          class="cursor-pointer"
+          disabled
+        ></button>
       </div>
-      <button type="button" id = "start-game">Iniciar jogo</button>
-
-      <div class="modal" id = "modal">
+      <div class="container-button">
+        <button type="button" id="start-game">Iniciar jogo</button>
+        <button class="btn-game" id = "reiniciar">Reiniciar</button>
+      </div>
+      <div class="modal" id="modal">
         <div class="modal-content">
-          <img class = "winner-image" src="./assets/1.png" alt="winner-image">
-          <p class = "winner-text" id="result-game"></p>
+          <img class="winner-image" id = "winner-image" src="./assets/1.png" alt="winner-image" />
+          <p class="winner-text" id="result-game"></p>
           <div class="btn-modal">
-            <button class = "btn" id = "play-again">Jogar novamente</button>
-            <button class = "btn" id = "close">Fechar</button>
+            <button class="btn" id="play-again">Jogar novamente</button>
+            <button class="btn" id="close">Fechar</button>
           </div>
         </div>
       </div>

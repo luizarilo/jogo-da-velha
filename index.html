@@ -15,7 +15,6 @@
     <img class="game-logo" src="./assets/image.png" alt="game-logo" />
     <h1 class="text-game">Jogo da velha</h1>
     <div class="input-name">
-      <label for="jogador-um">Jogador Um</label>
       <input
         class="name-player"
         id="jogador-um"
@@ -24,7 +23,7 @@
         id="jogador-um"
         placeholder="Jogador Um"
       />
-      <label for="jogador-dois">Jogador Dois</label>
+      <!-- <span class="alert">O campo nome não pode ser vazio</span> -->
       <input
         id="jogador-dois"
         type="text"
@@ -33,7 +32,9 @@
         class="name-player"
         placeholder="Jogador Dois"
       />
+      
     </div>
+    <span id="alert">Os campos acima não podem ser vazio(s)</span>
     <button class="btn-game" id="btn-game" type="button">Vamos jogar!</button>
   </body>
 </html>

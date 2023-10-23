@@ -9,6 +9,7 @@
   --secondary: #373636;
   --text: #f8f7f3;
   --disabled: #0e75b1;
+  --alert: #f82e56;
 }
 
 body {
@@ -37,9 +38,6 @@ body {
   margin: 10px 0 10px 0;
 }
 
-.input-name label {
-  margin: 5px;
-}
 
 .name-player {
   width: 250px;
@@ -47,6 +45,7 @@ body {
   border: 1px solid var(--text);
   border-radius: 10px;
   padding-left: 10px;
+  margin-bottom: 10px;
 }
 
 .btn-game, #start-game{
@@ -154,11 +153,13 @@ option{
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  height: 300px;
 }
 
 .winner-image{
   width: 15%;
   margin-top: 10px;
+  
 }
 
 .winner-text{
@@ -183,4 +184,10 @@ option{
 
 #close{
   margin-left: 10px;
+}
+
+#alert{
+  color: var(--alert);
+  font-family: "Pixelify Sans", sans-serif;
+  display: none;
 }
